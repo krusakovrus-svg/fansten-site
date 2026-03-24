@@ -130,11 +130,11 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       title: 'Fan support beyond the moment',
       subtitle: 'Fansten is a platform where fans support athletes during and after sports events.',
       metaAriaLabel: 'Product highlights',
-      meta: ['Live support', 'Post-event support window', 'Premium sports product experience'],
-      imageAlt: 'Fansten hero visual with a stadium atmosphere and fans supporting beyond the live moment.',
-      noteTitle: 'Built around the post-live moment',
+      meta: ['Live support', 'After-event support', 'Built for real sports moments'],
+      imageAlt: 'A stadium atmosphere with fans supporting athletes beyond the live moment.',
+      noteTitle: 'Support with meaning',
       noteBody:
-        'A premium dark landing built from the approved Fansten hero visual and ready to grow into the future fansten.com website.',
+        'Fansten keeps the emotional connection alive once the arena quiets down, giving fans a clear way to support the athletes they follow.',
       actions: {
         waitlist: 'Join the waitlist',
         x: 'Follow on X',
@@ -147,14 +147,14 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       paragraphs: [
         'Fansten helps fans turn sports emotion into real support.',
         'Fans can back athletes during live events and even after the final moment has passed.',
-        'It’s a simpler, more meaningful way to connect fan energy with the people they support.'
+        "It’s a simpler, more meaningful way to connect fan energy with the people they support."
       ],
       highlights: ['Matches', 'Fights', 'Races', 'Tournaments'],
       highlightsAriaLabel: 'Multi-sport product coverage',
-      imageAlt: 'Fan energy flowing toward an athlete as a broad visual metaphor for support.',
-      noteTitle: 'Sports emotion, made useful',
+      imageAlt: 'Fan energy moving toward an athlete as a visual metaphor for support.',
+      noteTitle: 'Support that stays personal',
       noteBody:
-        'A broader visual treatment keeps the section product-first, while the energy trail hints at support moving from the crowd to the athlete.'
+        'The feeling around a match, fight, or race can become a simple, meaningful act of support for the athlete behind the moment.'
     },
     workflow: {
       label: 'How Fansten works',
@@ -178,11 +178,10 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
           body: 'Send support during the moment — or shortly after it ends.'
         }
       ],
-      imageAlt:
-        'Fansten support flow visual showing the bridge between the event, the athlete, and live or after-event support.',
-      noteTitle: 'One clear flow',
+      imageAlt: 'A visual flow from the event to the athlete and into live or after-event support.',
+      noteTitle: 'A simple path to support',
       noteBody:
-        'Follow the event, choose the athlete, then support in the moment or shortly after.'
+        'Follow the event, choose the athlete, then send support while the moment is live or shortly after it ends.'
     },
     why: {
       label: 'Why it matters',
@@ -192,11 +191,10 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
         'Some miss the match. Some miss the fight. Some still want to support the athlete afterward.',
         'Fansten makes that possible.'
       ],
-      imageAlt:
-        'A quiet post-event stadium atmosphere that suggests support continuing after the final moment.',
-      captionTitle: 'After the event, the connection can still stay alive.',
+      imageAlt: 'A calm post-event stadium atmosphere that suggests support continuing after the final moment.',
+      captionTitle: "The final whistle doesn’t end the connection.",
       captionBody:
-        'The visual keeps the post-event atmosphere calm and human, so the section reads as quiet continuation rather than peak live action.',
+        'For many fans, support arrives a little later. Fansten keeps that window open while the emotion is still real.',
       quote: 'Missing the live moment should not mean missing the chance to support.',
       paragraphs: [
         'Fansten keeps a meaningful support window open even after the final moment has passed.',
@@ -204,7 +202,7 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       ]
     },
     finalCta: {
-      label: 'Final CTA',
+      label: 'Stay connected',
       title: 'Be early to Fansten',
       body:
         'Follow the launch and be among the first to see how Fansten is shaping a new way for fans to support athletes.',
@@ -215,8 +213,8 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       }
     },
     footer: {
-      left: 'Fansten landing workspace',
-      right: 'Prepared for future fansten.com rollout',
+      left: 'Fansten',
+      right: 'Support that lasts beyond the final whistle.',
       socialsAriaLabel: 'Fansten social links',
       socials: {
         x: 'X',
@@ -247,11 +245,11 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       title: 'Поддержка фанатов за пределами момента',
       subtitle: 'Fansten — это платформа, где фанаты поддерживают спортсменов во время и после спортивных событий.',
       metaAriaLabel: 'Ключевые особенности продукта',
-      meta: ['Поддержка в эфире', 'Окно поддержки после события', 'Премиальный цифровой опыт для спорта'],
-      imageAlt: 'Визуал Fansten со стадионом и атмосферой поддержки, которая продолжается после главного момента события.',
-      noteTitle: 'Построено вокруг момента после эфира',
+      meta: ['Поддержка в эфире', 'Поддержка после события', 'Создано для реальных спортивных моментов'],
+      imageAlt: 'Стадионная атмосфера Fansten, где поддержка продолжается и после главного момента события.',
+      noteTitle: 'Поддержка со смыслом',
       noteBody:
-        'Премиальный тёмный лендинг на базе утверждённого hero-визуала Fansten, готовый вырасти в будущий fansten.com.',
+        'Fansten сохраняет эмоциональную связь и после того, как арена затихает, давая фанатам понятный способ поддержать любимого спортсмена.',
       actions: {
         waitlist: 'Вступить в лист ожидания',
         x: 'Подписаться в X',
@@ -268,10 +266,10 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       ],
       highlights: ['Матчи', 'Бои', 'Гонки', 'Турниры'],
       highlightsAriaLabel: 'Мультиспортивное покрытие продукта',
-      imageAlt: 'Поток энергии от фанатов к спортсмену как широкий визуальный образ поддержки.',
-      noteTitle: 'Спортивные эмоции, превращённые в поддержку',
+      imageAlt: 'Поток энергии от фанатов к спортсмену как визуальный образ поддержки.',
+      noteTitle: 'Поддержка, которая остаётся личной',
       noteBody:
-        'Более широкий визуальный образ сохраняет продуктовый фокус, а световой поток подсказывает движение поддержки от фанатов к спортсмену.'
+        'Эмоции вокруг матча, боя или гонки можно превратить в простой и осмысленный жест поддержки для спортсмена.'
     },
     workflow: {
       label: 'Как работает Fansten',
@@ -295,11 +293,10 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
           body: 'Отправьте поддержку в моменте — или вскоре после его окончания.'
         }
       ],
-      imageAlt:
-        'Визуал сценария Fansten, который показывает связь между событием, спортсменом и поддержкой во время или после события.',
-      noteTitle: 'Один понятный сценарий',
+      imageAlt: 'Визуальный сценарий Fansten от события к спортсмену и дальше к поддержке в эфире или после события.',
+      noteTitle: 'Простой путь к поддержке',
       noteBody:
-        'Следите за событием, выберите спортсмена и поддержите его в моменте или вскоре после него.'
+        'Следите за событием, выберите спортсмена и отправьте поддержку в эфире или вскоре после окончания.'
     },
     why: {
       label: 'Почему это важно',
@@ -309,11 +306,10 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
         'Кто-то пропускает матч. Кто-то пропускает бой. Кто-то всё равно хочет поддержать спортсмена уже после события.',
         'Fansten делает это возможным.'
       ],
-      imageAlt:
-        'Тихая пост-событийная атмосфера стадиона, которая подсказывает, что поддержка может продолжаться и после финального момента.',
-      captionTitle: 'После события связь с спортсменом не исчезает.',
+      imageAlt: 'Спокойная пост-событийная атмосфера стадиона, где поддержка может продолжаться и после финального момента.',
+      captionTitle: 'Финальный свисток не обрывает связь.',
       captionBody:
-        'Визуал сохраняет спокойное и человеческое настроение после события, поэтому секция считывается как тихое продолжение, а не как пик live-экшена.',
+        'Для многих фанатов желание поддержать приходит чуть позже. Fansten сохраняет это окно открытым, пока эмоция ещё жива.',
       quote: 'Пропущенный момент не должен лишать возможности поддержать спортсмена.',
       paragraphs: [
         'Fansten оставляет осмысленное окно поддержки открытым и после финального свистка.',
@@ -321,7 +317,7 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       ]
     },
     finalCta: {
-      label: 'Ранний доступ',
+      label: 'Оставайтесь на связи',
       title: 'Будьте среди первых в Fansten',
       body:
         'Следите за запуском и будьте среди первых, кто увидит, как Fansten формирует новый способ для фанатов поддерживать спортсменов.',
@@ -332,8 +328,8 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       }
     },
     footer: {
-      left: 'Лендинг Fansten',
-      right: 'Подготовлено к будущему запуску fansten.com',
+      left: 'Fansten',
+      right: 'Поддержка, которая живёт дольше финального свистка.',
       socialsAriaLabel: 'Социальные ссылки Fansten',
       socials: {
         x: 'X',
