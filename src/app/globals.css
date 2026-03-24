@@ -761,9 +761,9 @@ img {
 
 .why-matters__image {
   object-fit: cover;
-  object-position: 44% 46%;
+  object-position: 50% 48%;
   filter: saturate(0.94) brightness(0.96) contrast(1.01);
-  transform: scale(1.03);
+  transform: scale(1.01);
 }
 
 .why-matters__visual-orbit {
