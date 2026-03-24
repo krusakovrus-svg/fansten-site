@@ -30,9 +30,6 @@ export function WhyItMattersSection({ copy }: WhyItMattersSectionProps) {
                 fill
                 sizes="(max-width: 980px) 100vw, 56vw"
               />
-
-              <div className="why-matters__visual-mask why-matters__visual-mask--headline" aria-hidden="true" />
-              <div className="why-matters__visual-mask why-matters__visual-mask--brand" aria-hidden="true" />
               <div className="why-matters__visual-orbit" aria-hidden="true" />
             </div>
           </div>

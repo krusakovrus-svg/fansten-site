@@ -30,7 +30,6 @@ export function SupportStorySection({ copy }: SupportStorySectionProps) {
               fill
               sizes="(max-width: 980px) 100vw, 54vw"
             />
-            <span className="support-story__visual-mask" aria-hidden="true" />
           </div>
         </div>
       </div>
