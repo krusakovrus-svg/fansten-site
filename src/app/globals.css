@@ -388,13 +388,15 @@ img {
 
 .support-story {
   display: grid;
-  grid-template-columns: minmax(0, 0.76fr) minmax(0, 1.24fr);
+  grid-template-columns: minmax(0, 1.24fr) minmax(0, 0.76fr);
   gap: clamp(28px, 4vw, 64px);
   align-items: center;
 }
 
 .support-story__copy {
   max-width: 520px;
+  justify-self: end;
+  order: 2;
 }
 
 .support-story__title {
@@ -420,7 +422,8 @@ img {
 
 .support-story__visual {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  order: 1;
 }
 
 .support-story__visual-frame {
@@ -1222,6 +1225,12 @@ img {
 
   .support-story__visual {
     justify-content: stretch;
+    order: initial;
+  }
+
+  .support-story__copy {
+    justify-self: start;
+    order: initial;
   }
 
   .workflow__visual {
