@@ -4,32 +4,19 @@ import { Cormorant_Garamond, Manrope } from 'next/font/google';
 import './globals.css';
 
 const displayFont = Cormorant_Garamond({
-  subsets: ['latin'],
+  subsets: ['latin', 'cyrillic'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-display'
 });
 
 const bodyFont = Manrope({
-  subsets: ['latin'],
+  subsets: ['latin', 'cyrillic'],
   variable: '--font-body'
 });
 
-const title = 'Fansten';
-const description = 'Fansten is a platform where fans support athletes during and after sports events.';
-
 export const metadata: Metadata = {
-  title,
-  description,
-  applicationName: title,
-  openGraph: {
-    title,
-    description,
-    type: 'website'
-  },
-  twitter: {
-    title,
-    description
-  }
+  metadataBase: new URL('https://fansten.com'),
+  applicationName: 'Fansten'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

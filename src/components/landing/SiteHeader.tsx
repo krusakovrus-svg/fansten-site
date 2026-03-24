@@ -1,42 +1,45 @@
 import Image from 'next/image';
 
+import type { LandingCopy } from '@/components/landing/content';
+
 interface SiteHeaderProps {
   waitlistHref: string;
   xHref: string;
+  copy: LandingCopy['header'];
 }
 
-export function SiteHeader({ waitlistHref, xHref }: SiteHeaderProps) {
+export function SiteHeader({ waitlistHref, xHref, copy }: SiteHeaderProps) {
   return (
     <header className="site-header">
       <div className="container">
         <div className="site-header__bar">
-          <a className="brand" href="#top" aria-label="Fansten home">
+          <a className="brand" href="#top" aria-label={copy.ariaHome}>
             <span className="brand__icon">
               <Image src="/images/fansten-icon.png" alt="" width={40} height={40} />
             </span>
             <span>
-              <span className="brand__wordmark">Fan support platform</span>
+              <span className="brand__wordmark">{copy.wordmark}</span>
               <strong className="brand__title">Fansten</strong>
             </span>
           </a>
 
-          <nav className="site-nav" aria-label="Landing sections">
+          <nav className="site-nav" aria-label={copy.navAriaLabel}>
             <a className="site-nav__link" href="#what-is-fansten">
-              What is Fansten
+              {copy.nav.what}
             </a>
             <a className="site-nav__link" href="#how-it-works">
-              How it works
+              {copy.nav.how}
             </a>
             <a className="site-nav__link" href="#why-it-matters">
-              Why it matters
+              {copy.nav.why}
             </a>
             <a className="site-nav__link" href={xHref} target="_blank" rel="noreferrer">
-              X
+              {copy.nav.x}
             </a>
           </nav>
 
           <a className="button button--secondary site-header__cta" href={waitlistHref}>
-            Join the waitlist
+            {copy.waitlist}
           </a>
         </div>
       </div>

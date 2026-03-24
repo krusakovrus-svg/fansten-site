@@ -1,33 +1,47 @@
 import { FinalCtaSection } from '@/components/landing/FinalCtaSection';
 import { HeroSection } from '@/components/landing/HeroSection';
 import { HowItWorksSection } from '@/components/landing/HowItWorksSection';
+import { LandingLocaleEffect } from '@/components/landing/LandingLocaleEffect';
 import { SiteHeader } from '@/components/landing/SiteHeader';
 import { SupportStorySection } from '@/components/landing/SupportStorySection';
 import { WhyItMattersSection } from '@/components/landing/WhyItMattersSection';
+import { landingContent, type LandingLocale } from '@/components/landing/content';
 
-const waitlistHref = 'mailto:hello@fansten.com?subject=Join%20the%20Fansten%20waitlist';
+const waitlistHrefByLocale: Record<LandingLocale, string> = {
+  en: 'mailto:hello@fansten.com?subject=Join%20the%20Fansten%20waitlist',
+  ru: 'mailto:hello@fansten.com?subject=%D0%9B%D0%B8%D1%81%D1%82%20%D0%BE%D0%B6%D0%B8%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F%20Fansten'
+};
+
 const xHref = 'https://x.com/fansten';
 
-export function LandingPage() {
+type LandingPageProps = {
+  locale?: LandingLocale;
+};
+
+export function LandingPage({ locale = 'en' }: LandingPageProps) {
+  const copy = landingContent[locale];
+  const waitlistHref = waitlistHrefByLocale[locale];
+
   return (
     <main className="landing-shell">
-      <SiteHeader waitlistHref={waitlistHref} xHref={xHref} />
+      <LandingLocaleEffect locale={locale} />
+      <SiteHeader waitlistHref={waitlistHref} xHref={xHref} copy={copy.header} />
 
       <div className="container">
-        <HeroSection waitlistHref={waitlistHref} xHref={xHref} />
+        <HeroSection waitlistHref={waitlistHref} xHref={xHref} copy={copy.hero} />
 
-        <SupportStorySection />
+        <SupportStorySection copy={copy.supportStory} />
 
-        <HowItWorksSection />
+        <HowItWorksSection copy={copy.workflow} />
 
-        <WhyItMattersSection />
+        <WhyItMattersSection copy={copy.why} />
 
-        <FinalCtaSection waitlistHref={waitlistHref} xHref={xHref} />
+        <FinalCtaSection waitlistHref={waitlistHref} xHref={xHref} copy={copy.finalCta} />
 
         <footer className="site-footer">
           <div className="site-footer__row">
-            <span>Fansten landing workspace</span>
-            <span>Prepared for future fansten.com rollout</span>
+            <span>{copy.footer.left}</span>
+            <span>{copy.footer.right}</span>
           </div>
         </footer>
       </div>

@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import { LandingPage } from '@/components/landing/LandingPage';
 import { getLandingMetadata } from '@/components/landing/content';
 
-export const metadata: Metadata = getLandingMetadata('en');
+export const metadata: Metadata = getLandingMetadata('ru');
 
-export default function Page() {
-  return <LandingPage locale="en" />;
+export default function RuPage() {
+  return <LandingPage locale="ru" />;
 }

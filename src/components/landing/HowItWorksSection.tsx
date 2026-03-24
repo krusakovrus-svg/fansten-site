@@ -1,38 +1,24 @@
 import Image from 'next/image';
 
-const steps = [
-  {
-    number: '01',
-    title: 'Follow the event',
-    body: 'Stay close to the moments that matter.'
-  },
-  {
-    number: '02',
-    title: 'Choose the athlete',
-    body: 'Support the person you want to back.'
-  },
-  {
-    number: '03',
-    title: 'Support live or after the event',
-    body: 'Send support during the moment — or shortly after it ends.'
-  }
-] as const;
+import type { LandingCopy } from '@/components/landing/content';
 
-export function HowItWorksSection() {
+type HowItWorksSectionProps = {
+  copy: LandingCopy['workflow'];
+};
+
+export function HowItWorksSection({ copy }: HowItWorksSectionProps) {
   return (
     <section className="section" id="how-it-works">
       <div className="workflow">
         <div className="workflow__header">
-          <span className="section__label">How Fansten works</span>
-          <h2 className="workflow__title">How Fansten works</h2>
-          <p className="workflow__intro">
-            Fansten makes athlete support simple, direct, and connected to real sports moments.
-          </p>
+          <span className="section__label">{copy.label}</span>
+          <h2 className="workflow__title">{copy.title}</h2>
+          <p className="workflow__intro">{copy.intro}</p>
         </div>
 
         <div className="workflow__layout">
-          <div className="workflow__steps" aria-label="Fansten support flow">
-            {steps.map((step) => (
+          <div className="workflow__steps" aria-label={copy.stepsAriaLabel}>
+            {copy.steps.map((step) => (
               <article key={step.number} className="workflow-step">
                 <div className="workflow-step__marker">
                   <span className="workflow-step__number">{step.number}</span>
@@ -51,16 +37,14 @@ export function HowItWorksSection() {
               <Image
                 className="workflow__image"
                 src="/images/fansten-how-it-works.png"
-                alt="Fansten support flow visual showing the bridge between the event, the athlete, and live or after-event support."
+                alt={copy.imageAlt}
                 fill
                 sizes="(max-width: 980px) 100vw, 48vw"
               />
 
               <div className="workflow__visual-note">
-                <strong>One clear flow</strong>
-                <p>
-                  Follow the event, choose the athlete, then support in the moment or shortly after.
-                </p>
+                <strong>{copy.noteTitle}</strong>
+                <p>{copy.noteBody}</p>
               </div>
             </div>
           </div>

@@ -1,33 +1,34 @@
 import Image from 'next/image';
 
+import type { LandingCopy } from '@/components/landing/content';
+
 interface HeroSectionProps {
   waitlistHref: string;
   xHref: string;
+  copy: LandingCopy['hero'];
 }
 
-export function HeroSection({ waitlistHref, xHref }: HeroSectionProps) {
+export function HeroSection({ waitlistHref, xHref, copy }: HeroSectionProps) {
   return (
     <section className="hero" id="top">
       <div className="hero__copy">
-        <p className="eyebrow">During the event. After the event.</p>
-        <h1 className="hero__title">Fan support beyond the moment</h1>
-        <p className="hero__subtitle">
-          Fansten is a platform where fans support athletes during and after sports events.
-        </p>
+        <p className="eyebrow">{copy.eyebrow}</p>
+        <h1 className="hero__title">{copy.title}</h1>
+        <p className="hero__subtitle">{copy.subtitle}</p>
 
         <div className="hero__actions button-row">
           <a className="button button--primary" href={waitlistHref}>
-            Join the waitlist
+            {copy.actions.waitlist}
           </a>
           <a className="button button--secondary" href={xHref} target="_blank" rel="noreferrer">
-            Follow on X
+            {copy.actions.x}
           </a>
         </div>
 
-        <div className="hero__meta" aria-label="Product highlights">
-          <span>Live support</span>
-          <span>Post-event support window</span>
-          <span>Brand-first sports-tech experience</span>
+        <div className="hero__meta" aria-label={copy.metaAriaLabel}>
+          {copy.meta.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
         </div>
       </div>
 
@@ -35,7 +36,7 @@ export function HeroSection({ waitlistHref, xHref }: HeroSectionProps) {
         <Image
           className="hero__image"
           src="/images/fansten-hero.png"
-          alt="Fansten hero visual with a stadium atmosphere and fans supporting beyond the live moment."
+          alt={copy.imageAlt}
           fill
           priority
           sizes="(max-width: 980px) 100vw, 52vw"
@@ -43,11 +44,8 @@ export function HeroSection({ waitlistHref, xHref }: HeroSectionProps) {
 
         <div className="hero__visual-note">
           <div>
-            <strong>Built around the post-live moment</strong>
-            <p>
-              A premium dark landing built from the approved Fansten hero visual and ready to grow into
-              the future fansten.com website.
-            </p>
+            <strong>{copy.noteTitle}</strong>
+            <p>{copy.noteBody}</p>
           </div>
 
           <span className="hero__pulse" aria-hidden="true" />
