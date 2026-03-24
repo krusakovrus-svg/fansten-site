@@ -328,9 +328,9 @@ img {
 
 .hero__image {
   object-fit: cover;
-  object-position: 78% 26%;
+  object-position: 50% 42%;
   filter: saturate(1.02) brightness(1.05);
-  transform: scale(1.14);
+  transform: scale(1);
 }
 
 .hero__visual-accent {
@@ -1213,7 +1213,7 @@ img {
   }
 
   .hero__image {
-    object-position: 74% 24%;
+    object-position: 50% 38%;
   }
 
   .steps-grid {
@@ -1257,7 +1257,7 @@ img {
   }
 
   .hero__visual {
-    min-height: 440px;
+    min-height: 420px;
   }
 
   .support-story__visual-frame {
