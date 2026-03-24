@@ -1,28 +1,11 @@
 import { HeroSection } from '@/components/landing/HeroSection';
+import { HowItWorksSection } from '@/components/landing/HowItWorksSection';
 import { SectionHeading } from '@/components/landing/SectionHeading';
 import { SiteHeader } from '@/components/landing/SiteHeader';
 import { SupportStorySection } from '@/components/landing/SupportStorySection';
 
 const waitlistHref = 'mailto:hello@fansten.com?subject=Join%20the%20Fansten%20waitlist';
 const xHref = 'https://x.com/fansten';
-
-const steps = [
-  {
-    number: '01',
-    title: 'Follow the event',
-    body: 'Stay close to the match, fight, or race as it unfolds and keep your attention on the athlete you care about.'
-  },
-  {
-    number: '02',
-    title: 'Choose the athlete',
-    body: 'Pick the side you want to back in a clean, focused flow built around real fan intent, not clutter.'
-  },
-  {
-    number: '03',
-    title: 'Support during or after',
-    body: 'Support in the live moment or within the post-event window if you missed the event and still want to show up.'
-  }
-] as const;
 
 const whyItMatters = [
   {
@@ -45,23 +28,7 @@ export function LandingPage() {
 
         <SupportStorySection />
 
-        <section className="section" id="how-it-works">
-          <SectionHeading
-            label="How it works"
-            title="A short support flow, not a complicated funnel"
-            body="The first Fansten flow is intentionally lightweight. It keeps the path from event interest to athlete support extremely clear."
-          />
-
-          <div className="steps-grid">
-            {steps.map((step) => (
-              <article key={step.number} className="step-card">
-                <span className="step-card__number">{step.number}</span>
-                <h3>{step.title}</h3>
-                <p>{step.body}</p>
-              </article>
-            ))}
-          </div>
-        </section>
+        <HowItWorksSection />
 
         <section className="section" id="why-it-matters">
           <SectionHeading
