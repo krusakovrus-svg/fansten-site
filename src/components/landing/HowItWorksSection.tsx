@@ -41,6 +41,9 @@ export function HowItWorksSection({ copy }: HowItWorksSectionProps) {
                 fill
                 sizes="(max-width: 980px) 100vw, 56vw"
               />
+              <span className="workflow__visual-mask workflow__visual-mask--left" aria-hidden="true" />
+              <span className="workflow__visual-mask workflow__visual-mask--right" aria-hidden="true" />
+              <span className="workflow__visual-mask workflow__visual-mask--bottom" aria-hidden="true" />
             </div>
           </div>
         </div>

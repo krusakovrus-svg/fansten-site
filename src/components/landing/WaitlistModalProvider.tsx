@@ -1,14 +1,6 @@
 'use client';
 
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-  type FormEvent,
-  type ReactNode
-} from 'react';
+import { createContext, useContext, useEffect, useState, type FormEvent, type ReactNode } from 'react';
 
 import {
   WAITLIST_CONTACT_TYPE_LABELS,
@@ -56,7 +48,7 @@ type WaitlistModalCopy = {
 const waitlistModalCopy: Record<WaitlistLocale, WaitlistModalCopy> = {
   en: {
     title: 'Join the Fansten waitlist',
-    body: 'Leave your details and we will contact you as Fansten gets closer to launch.',
+    body: 'Leave your details and we will keep you updated as Fansten gets closer to launch.',
     contactTypeLabel: 'Contact type',
     nameLabel: 'Name',
     phoneLabel: 'Phone',
@@ -65,7 +57,7 @@ const waitlistModalCopy: Record<WaitlistLocale, WaitlistModalCopy> = {
     submit: 'Join the waitlist',
     submitting: 'Saving...',
     successTitle: "You're on the waitlist",
-    successBody: 'Thanks. We saved your details and will keep you updated on the Fansten launch.',
+    successBody: 'Thanks. We saved your details and will contact you as Fansten gets closer to launch.',
     close: 'Close',
     errors: {
       required: 'Please fill in this field.',
@@ -77,7 +69,7 @@ const waitlistModalCopy: Record<WaitlistLocale, WaitlistModalCopy> = {
   },
   ru: {
     title: 'Вступить в лист ожидания Fansten',
-    body: 'Оставьте контакты, и мы свяжемся с вами, когда Fansten будет ближе к запуску.',
+    body: 'Оставьте контакты, и мы сообщим вам, когда Fansten будет ближе к запуску.',
     contactTypeLabel: 'Тип контакта',
     nameLabel: 'Имя',
     phoneLabel: 'Телефон',
@@ -94,7 +86,7 @@ const waitlistModalCopy: Record<WaitlistLocale, WaitlistModalCopy> = {
       invalid_phone: 'Укажите корректный номер телефона.',
       invalid_contact_type: 'Выберите тип контакта.'
     },
-    generalError: 'Не удалось отправить форму. Попробуйте ещё раз чуть позже.'
+    generalError: 'Не удалось отправить форму. Попробуйте еще раз чуть позже.'
   }
 };
 
@@ -122,6 +114,7 @@ export function WaitlistModalProvider({
     {}
   );
   const [formError, setFormError] = useState('');
+
   const copy = waitlistModalCopy[locale];
   const contactTypeOptions = WAITLIST_CONTACT_TYPE_LABELS[locale];
 
@@ -164,13 +157,6 @@ export function WaitlistModalProvider({
       window.removeEventListener('keydown', handleEscape);
     };
   }, [isOpen, isSubmitting]);
-
-  const contextValue = useMemo(
-    () => ({
-      openWaitlist
-    }),
-    []
-  );
 
   const updateField = <T extends keyof WaitlistFormState>(field: T, value: WaitlistFormState[T]) => {
     setFormState((current) => ({
@@ -251,7 +237,7 @@ export function WaitlistModalProvider({
   };
 
   return (
-    <WaitlistTriggerContext.Provider value={contextValue}>
+    <WaitlistTriggerContext.Provider value={{ openWaitlist }}>
       {children}
 
       {isOpen ? (
@@ -281,13 +267,13 @@ export function WaitlistModalProvider({
               aria-label={copy.close}
               disabled={isSubmitting}
             >
-              ×
+              &times;
             </button>
 
             {isSuccess ? (
               <div className="waitlist-modal__success">
                 <span className="waitlist-modal__success-mark" aria-hidden="true">
-                  ✓
+                  &#10003;
                 </span>
                 <h2 id="waitlist-modal-title">{copy.successTitle}</h2>
                 <p>{copy.successBody}</p>
@@ -333,8 +319,10 @@ export function WaitlistModalProvider({
                   <label className="waitlist-form__field">
                     <span className="waitlist-form__label">{copy.nameLabel}</span>
                     <input
+                      type="text"
                       className="waitlist-form__input"
                       autoComplete="name"
+                      autoFocus
                       value={formState.name}
                       onChange={(event) => updateField('name', event.target.value)}
                     />
@@ -346,6 +334,7 @@ export function WaitlistModalProvider({
                   <label className="waitlist-form__field">
                     <span className="waitlist-form__label">{copy.phoneLabel}</span>
                     <input
+                      type="tel"
                       className="waitlist-form__input"
                       autoComplete="tel"
                       inputMode="tel"
@@ -360,6 +349,7 @@ export function WaitlistModalProvider({
                   <label className="waitlist-form__field">
                     <span className="waitlist-form__label">{copy.emailLabel}</span>
                     <input
+                      type="email"
                       className="waitlist-form__input"
                       autoComplete="email"
                       inputMode="email"

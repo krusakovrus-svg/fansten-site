@@ -22,25 +22,18 @@ export function WhyItMattersSection({ copy }: WhyItMattersSectionProps) {
 
         <div className="why-matters__layout">
           <div className="why-matters__visual">
-            <div className="why-matters__visual-stack">
-              <div className="why-matters__visual-frame">
-                <Image
-                  className="why-matters__image"
-                  src="/images/fansten-why-it-matters.jpg"
-                  alt={copy.imageAlt}
-                  fill
-                  sizes="(max-width: 980px) 100vw, 56vw"
-                />
+            <div className="why-matters__visual-frame">
+              <Image
+                className="why-matters__image"
+                src="/images/fansten-why-it-matters.jpg"
+                alt={copy.imageAlt}
+                fill
+                sizes="(max-width: 980px) 100vw, 56vw"
+              />
 
-                <div className="why-matters__visual-mask why-matters__visual-mask--headline" aria-hidden="true" />
-                <div className="why-matters__visual-mask why-matters__visual-mask--brand" aria-hidden="true" />
-                <div className="why-matters__visual-orbit" aria-hidden="true" />
-              </div>
-
-              <div className="why-matters__visual-caption">
-                <strong>{copy.captionTitle}</strong>
-                <p>{copy.captionBody}</p>
-              </div>
+              <div className="why-matters__visual-mask why-matters__visual-mask--headline" aria-hidden="true" />
+              <div className="why-matters__visual-mask why-matters__visual-mask--brand" aria-hidden="true" />
+              <div className="why-matters__visual-orbit" aria-hidden="true" />
             </div>
           </div>
 
