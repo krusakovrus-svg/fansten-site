@@ -57,8 +57,6 @@ type WhyCopy = {
   title: string;
   intro: string[];
   imageAlt: string;
-  captionTitle: string;
-  captionBody: string;
   quote: string;
   paragraphs: string[];
 };
@@ -169,13 +167,9 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
         'Fansten makes that possible.'
       ],
       imageAlt: 'A calm post-event stadium atmosphere that suggests support continuing after the final moment.',
-      captionTitle: "The final whistle doesn't end the connection.",
-      captionBody:
-        'For many fans, support arrives a little later. Fansten keeps that window open while the emotion is still real.',
       quote: 'Missing the live moment should not mean missing the chance to support.',
       paragraphs: [
-        'Fansten keeps a meaningful support window open even after the final moment has passed.',
-        'It gives fans a simple way to come back, support the athlete, and stay part of the moment a little longer.'
+        'Fansten keeps a short support window open after the final whistle, so fans can still back the athlete while the emotion is real.'
       ]
     },
     finalCta: {
@@ -271,13 +265,9 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
         'Fansten делает это возможным.'
       ],
       imageAlt: 'Спокойная пост-событийная атмосфера стадиона, где поддержка может продолжаться и после финального момента.',
-      captionTitle: 'Финальный свисток не обрывает связь.',
-      captionBody:
-        'Для многих фанатов желание поддержать приходит чуть позже. Fansten сохраняет это окно открытым, пока эмоция еще жива.',
       quote: 'Пропущенный момент не должен лишать возможности поддержать спортсмена.',
       paragraphs: [
-        'Fansten оставляет осмысленное окно поддержки открытым и после финального свистка.',
-        'Так фанаты могут вернуться к событию, поддержать спортсмена и остаться частью этого момента чуть дольше.'
+        'Fansten оставляет короткое окно поддержки открытым и после финального свистка, чтобы фанаты могли поддержать спортсмена, пока эмоция еще жива.'
       ]
     },
     finalCta: {

@@ -42,6 +42,8 @@ export function HeroSection({ waitlistHref, xHref, telegramHref, copy }: HeroSec
           priority
           sizes="(max-width: 980px) 100vw, 58vw"
         />
+        <span className="hero__visual-mask hero__visual-mask--headline" aria-hidden="true" />
+        <span className="hero__visual-mask hero__visual-mask--body" aria-hidden="true" />
         <span className="hero__visual-accent" aria-hidden="true" />
       </div>
     </section>
