@@ -25,7 +25,7 @@ export function WhyItMattersSection({ copy }: WhyItMattersSectionProps) {
             <div className="why-matters__visual-frame">
               <Image
                 className="why-matters__image"
-                src="/images/fansten-why-it-matters.jpg"
+                src="/images/fansten-why-it-matters.png"
                 alt={copy.imageAlt}
                 fill
                 sizes="(max-width: 980px) 100vw, 56vw"
