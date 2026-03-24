@@ -1,6 +1,7 @@
 import { HeroSection } from '@/components/landing/HeroSection';
 import { SectionHeading } from '@/components/landing/SectionHeading';
 import { SiteHeader } from '@/components/landing/SiteHeader';
+import { SupportStorySection } from '@/components/landing/SupportStorySection';
 
 const waitlistHref = 'mailto:hello@fansten.com?subject=Join%20the%20Fansten%20waitlist';
 const xHref = 'https://x.com/fansten';
@@ -42,33 +43,7 @@ export function LandingPage() {
       <div className="container">
         <HeroSection waitlistHref={waitlistHref} xHref={xHref} />
 
-        <section className="section" id="what-is-fansten">
-          <SectionHeading
-            label="What is Fansten"
-            title="A cleaner support layer for sports fans"
-            body="Fansten helps fans support athletes during and after sports events. The product stays simple: follow the moment, choose the athlete, and support in a way that still matters even if you missed the live window."
-          />
-
-          <div className="panel-grid">
-            <article className="card">
-              <h3>Built for the emotional window around sports</h3>
-              <p>
-                This is not a betting product, not a dashboard, and not a news portal. Fansten is a
-                focused fan-support layer designed around meaningful moments before, during, and shortly
-                after the event.
-              </p>
-            </article>
-
-            <aside className="info-card">
-              <h3>Why it feels different</h3>
-              <p>
-                The experience stays direct, premium, and calm, so the athlete, the event, and the fan
-                decision remain at the center.
-              </p>
-              <div className="info-card__metric">One product logic: event first, athlete second, support third.</div>
-            </aside>
-          </div>
-        </section>
+        <SupportStorySection />
 
         <section className="section" id="how-it-works">
           <SectionHeading
