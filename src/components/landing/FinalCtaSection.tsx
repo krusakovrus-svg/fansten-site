@@ -3,10 +3,11 @@ import type { LandingCopy } from '@/components/landing/content';
 type FinalCtaSectionProps = {
   waitlistHref: string;
   xHref: string;
+  telegramHref: string;
   copy: LandingCopy['finalCta'];
 };
 
-export function FinalCtaSection({ waitlistHref, xHref, copy }: FinalCtaSectionProps) {
+export function FinalCtaSection({ waitlistHref, xHref, telegramHref, copy }: FinalCtaSectionProps) {
   return (
     <section className="section" id="waitlist">
       <div className="final-cta">
@@ -21,6 +22,9 @@ export function FinalCtaSection({ waitlistHref, xHref, copy }: FinalCtaSectionPr
             </a>
             <a className="button button--secondary" href={xHref} target="_blank" rel="noreferrer">
               {copy.actions.x}
+            </a>
+            <a className="button button--secondary" href={telegramHref} target="_blank" rel="noreferrer">
+              {copy.actions.telegram}
             </a>
           </div>
         </div>

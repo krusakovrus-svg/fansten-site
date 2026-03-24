@@ -32,6 +32,7 @@ type HeroCopy = {
   actions: {
     waitlist: string;
     x: string;
+    telegram: string;
   };
 };
 
@@ -79,12 +80,18 @@ type FinalCtaCopy = {
   actions: {
     waitlist: string;
     x: string;
+    telegram: string;
   };
 };
 
 type FooterCopy = {
   left: string;
   right: string;
+  socialsAriaLabel: string;
+  socials: {
+    x: string;
+    telegram: string;
+  };
 };
 
 export type LandingCopy = {
@@ -130,7 +137,8 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
         'A premium dark landing built from the approved Fansten hero visual and ready to grow into the future fansten.com website.',
       actions: {
         waitlist: 'Join the waitlist',
-        x: 'Follow on X'
+        x: 'Follow on X',
+        telegram: 'Join Telegram'
       }
     },
     supportStory: {
@@ -202,12 +210,18 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
         'Follow the launch and be among the first to see how Fansten is shaping a new way for fans to support athletes.',
       actions: {
         waitlist: 'Join the waitlist',
-        x: 'Follow on X'
+        x: 'Follow on X',
+        telegram: 'Join Telegram'
       }
     },
     footer: {
       left: 'Fansten landing workspace',
-      right: 'Prepared for future fansten.com rollout'
+      right: 'Prepared for future fansten.com rollout',
+      socialsAriaLabel: 'Fansten social links',
+      socials: {
+        x: 'X',
+        telegram: 'Telegram'
+      }
     }
   },
   ru: {
@@ -240,7 +254,8 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
         'Премиальный тёмный лендинг на базе утверждённого hero-визуала Fansten, готовый вырасти в будущий fansten.com.',
       actions: {
         waitlist: 'Вступить в лист ожидания',
-        x: 'Подписаться в X'
+        x: 'Подписаться в X',
+        telegram: 'В Telegram'
       }
     },
     supportStory: {
@@ -312,12 +327,18 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
         'Следите за запуском и будьте среди первых, кто увидит, как Fansten формирует новый способ для фанатов поддерживать спортсменов.',
       actions: {
         waitlist: 'Вступить в лист ожидания',
-        x: 'Подписаться в X'
+        x: 'Подписаться в X',
+        telegram: 'В Telegram'
       }
     },
     footer: {
       left: 'Лендинг Fansten',
-      right: 'Подготовлено к будущему запуску fansten.com'
+      right: 'Подготовлено к будущему запуску fansten.com',
+      socialsAriaLabel: 'Социальные ссылки Fansten',
+      socials: {
+        x: 'X',
+        telegram: 'Telegram'
+      }
     }
   }
 };

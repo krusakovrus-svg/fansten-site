@@ -256,6 +256,7 @@ img {
 
 .hero__actions {
   margin-top: 34px;
+  align-items: center;
 }
 
 .hero__meta {
@@ -1050,6 +1051,14 @@ img {
   padding: 0 0 42px;
 }
 
+.site-footer__cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px 20px;
+}
+
 .site-footer__row {
   display: flex;
   flex-wrap: wrap;
@@ -1060,6 +1069,32 @@ img {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.54);
   font-size: 0.92rem;
+}
+
+.site-footer__socials {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-footer__socials a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.72);
+  transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.site-footer__socials a:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 @media (max-width: 980px) {
@@ -1096,6 +1131,10 @@ img {
 
   .why-matters__visual {
     justify-content: stretch;
+  }
+
+  .site-footer__cluster {
+    justify-content: flex-start;
   }
 }
 

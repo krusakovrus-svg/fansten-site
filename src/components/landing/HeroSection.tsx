@@ -5,10 +5,11 @@ import type { LandingCopy } from '@/components/landing/content';
 interface HeroSectionProps {
   waitlistHref: string;
   xHref: string;
+  telegramHref: string;
   copy: LandingCopy['hero'];
 }
 
-export function HeroSection({ waitlistHref, xHref, copy }: HeroSectionProps) {
+export function HeroSection({ waitlistHref, xHref, telegramHref, copy }: HeroSectionProps) {
   return (
     <section className="hero" id="top">
       <div className="hero__copy">
@@ -22,6 +23,9 @@ export function HeroSection({ waitlistHref, xHref, copy }: HeroSectionProps) {
           </a>
           <a className="button button--secondary" href={xHref} target="_blank" rel="noreferrer">
             {copy.actions.x}
+          </a>
+          <a className="button button--secondary" href={telegramHref} target="_blank" rel="noreferrer">
+            {copy.actions.telegram}
           </a>
         </div>
 
