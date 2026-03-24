@@ -3,20 +3,10 @@ import { HowItWorksSection } from '@/components/landing/HowItWorksSection';
 import { SectionHeading } from '@/components/landing/SectionHeading';
 import { SiteHeader } from '@/components/landing/SiteHeader';
 import { SupportStorySection } from '@/components/landing/SupportStorySection';
+import { WhyItMattersSection } from '@/components/landing/WhyItMattersSection';
 
 const waitlistHref = 'mailto:hello@fansten.com?subject=Join%20the%20Fansten%20waitlist';
 const xHref = 'https://x.com/fansten';
-
-const whyItMatters = [
-  {
-    title: 'Live moments are easy to miss',
-    body: 'Fans are busy, asleep, traveling, or catching the result after the final whistle. Support should not disappear just because the timing was wrong.'
-  },
-  {
-    title: 'Athletes still feel the support',
-    body: 'Fansten extends the emotional moment and turns a missed live window into a second chance to back the athlete that mattered.'
-  }
-] as const;
 
 export function LandingPage() {
   return (
@@ -30,34 +20,7 @@ export function LandingPage() {
 
         <HowItWorksSection />
 
-        <section className="section" id="why-it-matters">
-          <SectionHeading
-            label="Why it matters"
-            title="Support should survive the final whistle"
-            body="Not every fan catches the event live. Fansten keeps the support window open long enough for that fan to still reward a win, back a favorite athlete, or take part after the moment has passed."
-          />
-
-          <div className="impact-grid">
-            <div className="impact-quote">
-              <p>
-                The event can end.
-                <br />
-                The support should not vanish with it.
-              </p>
-            </div>
-
-            <div className="card bullet-list">
-              {whyItMatters.map((item) => (
-                <div key={item.title} className="bullet">
-                  <div>
-                    <strong>{item.title}</strong>
-                    <span>{item.body}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <WhyItMattersSection />
 
         <section className="section">
           <div className="cta-panel" id="waitlist">
