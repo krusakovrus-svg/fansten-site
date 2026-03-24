@@ -1,6 +1,6 @@
+import { FinalCtaSection } from '@/components/landing/FinalCtaSection';
 import { HeroSection } from '@/components/landing/HeroSection';
 import { HowItWorksSection } from '@/components/landing/HowItWorksSection';
-import { SectionHeading } from '@/components/landing/SectionHeading';
 import { SiteHeader } from '@/components/landing/SiteHeader';
 import { SupportStorySection } from '@/components/landing/SupportStorySection';
 import { WhyItMattersSection } from '@/components/landing/WhyItMattersSection';
@@ -22,29 +22,7 @@ export function LandingPage() {
 
         <WhyItMattersSection />
 
-        <section className="section">
-          <div className="cta-panel" id="waitlist">
-            <SectionHeading
-              label="Final CTA"
-              title="Get early access to Fansten"
-              body="Join the waitlist for the first version of the product and follow the brand as the website grows into the full fansten.com experience."
-            />
-
-            <div className="button-row">
-              <a className="button button--primary" href={waitlistHref}>
-                Join the waitlist
-              </a>
-              <a className="button button--secondary" href={xHref} target="_blank" rel="noreferrer">
-                Follow on X
-              </a>
-            </div>
-
-            <p className="cta-panel__note">
-              Current assumption for waitlist capture: <code>hello@fansten.com</code>. This can be swapped
-              for a real form endpoint later without changing the page structure.
-            </p>
-          </div>
-        </section>
+        <FinalCtaSection waitlistHref={waitlistHref} xHref={xHref} />
 
         <footer className="site-footer">
           <div className="site-footer__row">
