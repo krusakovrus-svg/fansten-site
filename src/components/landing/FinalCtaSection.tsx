@@ -4,10 +4,11 @@ type FinalCtaSectionProps = {
   waitlistHref: string;
   xHref: string;
   telegramHref: string;
+  discordHref: string;
   copy: LandingCopy['finalCta'];
 };
 
-export function FinalCtaSection({ waitlistHref, xHref, telegramHref, copy }: FinalCtaSectionProps) {
+export function FinalCtaSection({ waitlistHref, xHref, telegramHref, discordHref, copy }: FinalCtaSectionProps) {
   return (
     <section className="section" id="waitlist">
       <div className="final-cta">
@@ -25,6 +26,9 @@ export function FinalCtaSection({ waitlistHref, xHref, telegramHref, copy }: Fin
             </a>
             <a className="button button--secondary" href={telegramHref} target="_blank" rel="noreferrer">
               {copy.actions.telegram}
+            </a>
+            <a className="button button--secondary" href={discordHref} target="_blank" rel="noreferrer">
+              {copy.actions.discord}
             </a>
           </div>
         </div>

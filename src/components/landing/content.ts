@@ -29,6 +29,7 @@ type HeroCopy = {
     waitlist: string;
     x: string;
     telegram: string;
+    discord: string;
   };
 };
 
@@ -69,6 +70,7 @@ type FinalCtaCopy = {
     waitlist: string;
     x: string;
     telegram: string;
+    discord: string;
   };
 };
 
@@ -79,6 +81,7 @@ type FooterCopy = {
   socials: {
     x: string;
     telegram: string;
+    discord: string;
   };
 };
 
@@ -121,7 +124,8 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       actions: {
         waitlist: 'Join the waitlist',
         x: 'Follow on X',
-        telegram: 'Join Telegram'
+        telegram: 'Join Telegram',
+        discord: 'Join Discord'
       }
     },
     supportStory: {
@@ -180,7 +184,8 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       actions: {
         waitlist: 'Join the waitlist',
         x: 'Follow on X',
-        telegram: 'Join Telegram'
+        telegram: 'Join Telegram',
+        discord: 'Join Discord'
       }
     },
     footer: {
@@ -189,7 +194,8 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       socialsAriaLabel: 'Fansten social links',
       socials: {
         x: 'X',
-        telegram: 'Telegram'
+        telegram: 'Telegram',
+        discord: 'Discord'
       }
     }
   },
@@ -197,7 +203,7 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
     locale: 'ru',
     metadata: {
       title: 'Fansten',
-      description: 'Fansten - это платформа, где фанаты поддерживают спортсменов во время и после спортивных событий.'
+      description: 'Fansten — это платформа, где фанаты поддерживают спортсменов во время и после спортивных событий.'
     },
     header: {
       ariaHome: 'Главная Fansten',
@@ -214,12 +220,13 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
     hero: {
       eyebrow: 'Во время события. После события.',
       title: 'Поддержка фанатов за пределами момента',
-      subtitle: 'Fansten - это платформа, где фанаты поддерживают спортсменов во время и после спортивных событий.',
+      subtitle: 'Fansten — это платформа, где фанаты поддерживают спортсменов во время и после спортивных событий.',
       imageAlt: 'Стадионная атмосфера Fansten, где поддержка продолжается и после главного момента события.',
       actions: {
         waitlist: 'Вступить в лист ожидания',
         x: 'Подписаться в X',
-        telegram: 'В Telegram'
+        telegram: 'В Telegram',
+        discord: 'В Discord'
       }
     },
     supportStory: {
@@ -278,7 +285,8 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       actions: {
         waitlist: 'Вступить в лист ожидания',
         x: 'Подписаться в X',
-        telegram: 'В Telegram'
+        telegram: 'В Telegram',
+        discord: 'В Discord'
       }
     },
     footer: {
@@ -287,7 +295,8 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       socialsAriaLabel: 'Социальные ссылки Fansten',
       socials: {
         x: 'X',
-        telegram: 'Telegram'
+        telegram: 'Telegram',
+        discord: 'Discord'
       }
     }
   }

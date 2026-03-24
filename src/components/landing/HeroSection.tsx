@@ -6,10 +6,11 @@ interface HeroSectionProps {
   waitlistHref: string;
   xHref: string;
   telegramHref: string;
+  discordHref: string;
   copy: LandingCopy['hero'];
 }
 
-export function HeroSection({ waitlistHref, xHref, telegramHref, copy }: HeroSectionProps) {
+export function HeroSection({ waitlistHref, xHref, telegramHref, discordHref, copy }: HeroSectionProps) {
   return (
     <section className="hero" id="top">
       <div className="hero__copy">
@@ -29,6 +30,9 @@ export function HeroSection({ waitlistHref, xHref, telegramHref, copy }: HeroSec
         <div className="hero__subactions">
           <a href={telegramHref} target="_blank" rel="noreferrer">
             {copy.actions.telegram}
+          </a>
+          <a href={discordHref} target="_blank" rel="noreferrer">
+            {copy.actions.discord}
           </a>
         </div>
       </div>

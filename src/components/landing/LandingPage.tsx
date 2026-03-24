@@ -14,6 +14,7 @@ const waitlistHrefByLocale: Record<LandingLocale, string> = {
 
 const xHref = 'https://x.com/fansten_app';
 const telegramHref = 'https://t.me/Fansten_app';
+const discordHref = 'https://discord.gg/EUZmsptS';
 
 type LandingPageProps = {
   locale?: LandingLocale;
@@ -33,6 +34,7 @@ export function LandingPage({ locale = 'en' }: LandingPageProps) {
           waitlistHref={waitlistHref}
           xHref={xHref}
           telegramHref={telegramHref}
+          discordHref={discordHref}
           copy={copy.hero}
         />
 
@@ -46,6 +48,7 @@ export function LandingPage({ locale = 'en' }: LandingPageProps) {
           waitlistHref={waitlistHref}
           xHref={xHref}
           telegramHref={telegramHref}
+          discordHref={discordHref}
           copy={copy.finalCta}
         />
 
@@ -62,6 +65,9 @@ export function LandingPage({ locale = 'en' }: LandingPageProps) {
               </a>
               <a href={telegramHref} target="_blank" rel="noreferrer">
                 {copy.footer.socials.telegram}
+              </a>
+              <a href={discordHref} target="_blank" rel="noreferrer">
+                {copy.footer.socials.discord}
               </a>
             </nav>
           </div>
