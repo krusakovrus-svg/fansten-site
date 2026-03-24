@@ -24,8 +24,6 @@ type HeroCopy = {
   eyebrow: string;
   title: string;
   subtitle: string;
-  metaAriaLabel: string;
-  meta: string[];
   imageAlt: string;
   noteTitle: string;
   noteBody: string;
@@ -129,8 +127,6 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       eyebrow: 'During the event. After the event.',
       title: 'Fan support beyond the moment',
       subtitle: 'Fansten is a platform where fans support athletes during and after sports events.',
-      metaAriaLabel: 'Product highlights',
-      meta: ['Live support', 'After-event support', 'Built for real sports moments'],
       imageAlt: 'A stadium atmosphere with fans supporting athletes beyond the live moment.',
       noteTitle: 'Support with meaning',
       noteBody:
@@ -244,8 +240,6 @@ export const landingContent: Record<LandingLocale, LandingCopy> = {
       eyebrow: 'Во время события. После события.',
       title: 'Поддержка фанатов за пределами момента',
       subtitle: 'Fansten — это платформа, где фанаты поддерживают спортсменов во время и после спортивных событий.',
-      metaAriaLabel: 'Ключевые особенности продукта',
-      meta: ['Поддержка в эфире', 'Поддержка после события', 'Создано для реальных спортивных моментов'],
       imageAlt: 'Стадионная атмосфера Fansten, где поддержка продолжается и после главного момента события.',
       noteTitle: 'Поддержка со смыслом',
       noteBody:

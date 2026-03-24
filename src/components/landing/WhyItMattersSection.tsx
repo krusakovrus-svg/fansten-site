@@ -49,7 +49,7 @@ export function WhyItMattersSection({ copy }: WhyItMattersSectionProps) {
               <p>{copy.quote}</p>
             </div>
 
-            <div className="card why-matters__text-card">
+            <div className="why-matters__text-card">
               {copy.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}

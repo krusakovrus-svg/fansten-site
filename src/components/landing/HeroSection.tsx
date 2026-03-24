@@ -24,15 +24,12 @@ export function HeroSection({ waitlistHref, xHref, telegramHref, copy }: HeroSec
           <a className="button button--secondary" href={xHref} target="_blank" rel="noreferrer">
             {copy.actions.x}
           </a>
-          <a className="button button--secondary" href={telegramHref} target="_blank" rel="noreferrer">
-            {copy.actions.telegram}
-          </a>
         </div>
 
-        <div className="hero__meta" aria-label={copy.metaAriaLabel}>
-          {copy.meta.map((item) => (
-            <span key={item}>{item}</span>
-          ))}
+        <div className="hero__subactions">
+          <a href={telegramHref} target="_blank" rel="noreferrer">
+            {copy.actions.telegram}
+          </a>
         </div>
       </div>
 

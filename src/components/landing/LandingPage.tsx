@@ -51,18 +51,19 @@ export function LandingPage({ locale = 'en' }: LandingPageProps) {
 
         <footer className="site-footer">
           <div className="site-footer__row">
-            <span>{copy.footer.left}</span>
-            <div className="site-footer__cluster">
+            <div className="site-footer__brand">
+              <strong>{copy.footer.left}</strong>
               <span>{copy.footer.right}</span>
-              <nav className="site-footer__socials" aria-label={copy.footer.socialsAriaLabel}>
-                <a href={xHref} target="_blank" rel="noreferrer">
-                  {copy.footer.socials.x}
-                </a>
-                <a href={telegramHref} target="_blank" rel="noreferrer">
-                  {copy.footer.socials.telegram}
-                </a>
-              </nav>
             </div>
+
+            <nav className="site-footer__socials" aria-label={copy.footer.socialsAriaLabel}>
+              <a href={xHref} target="_blank" rel="noreferrer">
+                {copy.footer.socials.x}
+              </a>
+              <a href={telegramHref} target="_blank" rel="noreferrer">
+                {copy.footer.socials.telegram}
+              </a>
+            </nav>
           </div>
         </footer>
       </div>
