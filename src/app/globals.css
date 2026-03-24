@@ -460,9 +460,9 @@ img {
 
 .support-story__image {
   object-fit: cover;
-  object-position: center 78%;
+  object-position: 50% 54%;
   filter: saturate(0.98) brightness(0.99);
-  transform: scale(1.12);
+  transform: scale(1.02);
 }
 
 .card,

@@ -25,7 +25,7 @@ export function SupportStorySection({ copy }: SupportStorySectionProps) {
           <div className="support-story__visual-frame">
             <Image
               className="support-story__image"
-              src="/images/fansten-support-visual.jpg"
+              src="/images/fansten-support-visual.png"
               alt={copy.imageAlt}
               fill
               sizes="(max-width: 980px) 100vw, 54vw"
