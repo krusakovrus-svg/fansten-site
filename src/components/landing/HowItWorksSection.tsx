@@ -39,13 +39,8 @@ export function HowItWorksSection({ copy }: HowItWorksSectionProps) {
                 src="/images/fansten-how-it-works.png"
                 alt={copy.imageAlt}
                 fill
-                sizes="(max-width: 980px) 100vw, 48vw"
+                sizes="(max-width: 980px) 100vw, 56vw"
               />
-
-              <div className="workflow__visual-note">
-                <strong>{copy.noteTitle}</strong>
-                <p>{copy.noteBody}</p>
-              </div>
             </div>
           </div>
         </div>

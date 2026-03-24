@@ -40,17 +40,9 @@ export function HeroSection({ waitlistHref, xHref, telegramHref, copy }: HeroSec
           alt={copy.imageAlt}
           fill
           priority
-          sizes="(max-width: 980px) 100vw, 52vw"
+          sizes="(max-width: 980px) 100vw, 58vw"
         />
-
-        <div className="hero__visual-note">
-          <div>
-            <strong>{copy.noteTitle}</strong>
-            <p>{copy.noteBody}</p>
-          </div>
-
-          <span className="hero__pulse" aria-hidden="true" />
-        </div>
+        <span className="hero__visual-accent" aria-hidden="true" />
       </div>
     </section>
   );

@@ -29,7 +29,7 @@ export function WhyItMattersSection({ copy }: WhyItMattersSectionProps) {
                   src="/images/fansten-why-it-matters.jpg"
                   alt={copy.imageAlt}
                   fill
-                  sizes="(max-width: 980px) 100vw, 50vw"
+                  sizes="(max-width: 980px) 100vw, 56vw"
                 />
 
                 <div className="why-matters__visual-mask why-matters__visual-mask--headline" aria-hidden="true" />

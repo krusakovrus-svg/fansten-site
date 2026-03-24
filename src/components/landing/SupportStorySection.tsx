@@ -19,12 +19,6 @@ export function SupportStorySection({ copy }: SupportStorySectionProps) {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-
-          <div className="support-story__highlights" aria-label={copy.highlightsAriaLabel}>
-            {copy.highlights.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-          </div>
         </div>
 
         <div className="support-story__visual">
@@ -34,13 +28,8 @@ export function SupportStorySection({ copy }: SupportStorySectionProps) {
               src="/images/fansten-support-visual.jpg"
               alt={copy.imageAlt}
               fill
-              sizes="(max-width: 980px) 100vw, 42vw"
+              sizes="(max-width: 980px) 100vw, 54vw"
             />
-
-            <div className="support-story__visual-note">
-              <strong>{copy.noteTitle}</strong>
-              <p>{copy.noteBody}</p>
-            </div>
           </div>
         </div>
       </div>
