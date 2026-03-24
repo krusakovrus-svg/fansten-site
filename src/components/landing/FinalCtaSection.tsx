@@ -1,13 +1,13 @@
 import type { LandingCopy } from '@/components/landing/content';
+import { WaitlistTriggerButton } from '@/components/landing/WaitlistModalProvider';
 
 type FinalCtaSectionProps = {
-  waitlistHref: string;
   xHref: string;
   telegramHref: string;
   copy: LandingCopy['finalCta'];
 };
 
-export function FinalCtaSection({ waitlistHref, xHref, telegramHref, copy }: FinalCtaSectionProps) {
+export function FinalCtaSection({ xHref, telegramHref, copy }: FinalCtaSectionProps) {
   return (
     <section className="section" id="waitlist">
       <div className="final-cta">
@@ -17,9 +17,7 @@ export function FinalCtaSection({ waitlistHref, xHref, telegramHref, copy }: Fin
           <p className="final-cta__body">{copy.body}</p>
 
           <div className="button-row final-cta__actions">
-            <a className="button button--primary" href={waitlistHref}>
-              {copy.actions.waitlist}
-            </a>
+            <WaitlistTriggerButton className="button button--primary" label={copy.actions.waitlist} />
             <a className="button button--secondary" href={xHref} target="_blank" rel="noreferrer">
               {copy.actions.x}
             </a>

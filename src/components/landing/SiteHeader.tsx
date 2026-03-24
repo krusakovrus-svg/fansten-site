@@ -1,14 +1,14 @@
 import Image from 'next/image';
 
 import type { LandingCopy } from '@/components/landing/content';
+import { WaitlistTriggerButton } from '@/components/landing/WaitlistModalProvider';
 
 interface SiteHeaderProps {
-  waitlistHref: string;
   xHref: string;
   copy: LandingCopy['header'];
 }
 
-export function SiteHeader({ waitlistHref, xHref, copy }: SiteHeaderProps) {
+export function SiteHeader({ xHref, copy }: SiteHeaderProps) {
   return (
     <header className="site-header">
       <div className="container">
@@ -38,9 +38,7 @@ export function SiteHeader({ waitlistHref, xHref, copy }: SiteHeaderProps) {
             </a>
           </nav>
 
-          <a className="button button--secondary site-header__cta" href={waitlistHref}>
-            {copy.waitlist}
-          </a>
+          <WaitlistTriggerButton className="button button--secondary site-header__cta" label={copy.waitlist} />
         </div>
       </div>
     </header>

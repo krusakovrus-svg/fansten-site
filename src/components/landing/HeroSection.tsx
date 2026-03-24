@@ -1,15 +1,15 @@
 import Image from 'next/image';
 
 import type { LandingCopy } from '@/components/landing/content';
+import { WaitlistTriggerButton } from '@/components/landing/WaitlistModalProvider';
 
 interface HeroSectionProps {
-  waitlistHref: string;
   xHref: string;
   telegramHref: string;
   copy: LandingCopy['hero'];
 }
 
-export function HeroSection({ waitlistHref, xHref, telegramHref, copy }: HeroSectionProps) {
+export function HeroSection({ xHref, telegramHref, copy }: HeroSectionProps) {
   return (
     <section className="hero" id="top">
       <div className="hero__copy">
@@ -18,9 +18,7 @@ export function HeroSection({ waitlistHref, xHref, telegramHref, copy }: HeroSec
         <p className="hero__subtitle">{copy.subtitle}</p>
 
         <div className="hero__actions button-row">
-          <a className="button button--primary" href={waitlistHref}>
-            {copy.actions.waitlist}
-          </a>
+          <WaitlistTriggerButton className="button button--primary" label={copy.actions.waitlist} />
           <a className="button button--secondary" href={xHref} target="_blank" rel="noreferrer">
             {copy.actions.x}
           </a>
