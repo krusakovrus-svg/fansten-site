@@ -917,6 +917,17 @@ img {
   letter-spacing: -0.02em;
 }
 
+.why-matters__text-card {
+  display: grid;
+  gap: 14px;
+}
+
+.why-matters__text-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.78;
+}
+
 .impact-quote {
   padding: clamp(28px, 3vw, 36px);
   border-radius: var(--radius-large);

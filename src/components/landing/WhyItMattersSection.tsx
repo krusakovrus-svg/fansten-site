@@ -1,30 +1,21 @@
 import Image from 'next/image';
 
-const reasons = [
-  {
-    title: 'Not every fan catches the event live',
-    body: 'Fans are busy, asleep, traveling, or catching the result after the final whistle.'
-  },
-  {
-    title: 'Missing the live moment should not end the support',
-    body: 'The emotional connection can still be real, even when the support comes after the event ends.'
-  },
-  {
-    title: 'Fansten keeps that door open',
-    body: 'It gives fans a way to support athletes once the arena quiets down, while the meaning of the moment still remains.'
-  }
-] as const;
-
 export function WhyItMattersSection() {
   return (
     <section className="section" id="why-it-matters">
       <div className="why-matters">
         <div className="why-matters__header">
           <span className="section__label">Why it matters</span>
-          <h2 className="why-matters__title">Support should survive the final whistle</h2>
+          <h2 className="why-matters__title">Why it matters</h2>
           <p className="why-matters__intro">
-            Not every fan catches the event live. Missing the live moment should not mean losing the
-            chance to support.
+            Not every fan catches the event live.
+          </p>
+          <p className="why-matters__intro">
+            Some miss the match. Some miss the fight. Some still want to support the athlete
+            afterward.
+          </p>
+          <p className="why-matters__intro">
+            Fansten makes that possible.
           </p>
         </div>
 
@@ -57,22 +48,18 @@ export function WhyItMattersSection() {
 
           <div className="why-matters__content">
             <div className="why-matters__quote">
-              <p>
-                The event can end.
-                <br />
-                The support should not vanish with it.
-              </p>
+              <p>Missing the live moment should not mean missing the chance to support.</p>
             </div>
 
-            <div className="card bullet-list">
-              {reasons.map((item) => (
-                <div key={item.title} className="bullet">
-                  <div>
-                    <strong>{item.title}</strong>
-                    <span>{item.body}</span>
-                  </div>
-                </div>
-              ))}
+            <div className="card why-matters__text-card">
+              <p>
+                Fansten keeps a meaningful support window open even after the final moment has
+                passed.
+              </p>
+              <p>
+                It gives fans a simple way to come back, support the athlete, and stay part of the
+                moment a little longer.
+              </p>
             </div>
           </div>
         </div>

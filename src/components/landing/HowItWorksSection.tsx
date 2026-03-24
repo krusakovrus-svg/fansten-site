@@ -14,7 +14,7 @@ const steps = [
   {
     number: '03',
     title: 'Support live or after the event',
-    body: 'Send support during the moment - or shortly after it ends.'
+    body: 'Send support during the moment — or shortly after it ends.'
   }
 ] as const;
 
